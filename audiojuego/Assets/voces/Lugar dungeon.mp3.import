@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bek6ygvr7ye05"
+path="res://.godot/imported/Lugar dungeon.mp3-3c66c5abecfb54f30967c3166e9f1712.mp3str"
+
+[deps]
+
+source_file="res://Assets/voces/Lugar dungeon.mp3"
+dest_files=["res://.godot/imported/Lugar dungeon.mp3-3c66c5abecfb54f30967c3166e9f1712.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

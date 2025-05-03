@@ -1,0 +1,52 @@
+[gd_scene load_steps=11 format=3 uid="uid://2r7g81oih87k"]
+
+[ext_resource type="Script" path="res://script/segundaparte.gd" id="1_ovbi8"]
+[ext_resource type="PackedScene" uid="uid://dssd3fxojcs2i" path="res://escena/personaje.tscn" id="2_xuc5o"]
+[ext_resource type="PackedScene" uid="uid://cbs2pasmtlsf3" path="res://escena/pared_horizontal.tscn" id="3_81ohd"]
+[ext_resource type="PackedScene" uid="uid://dwrc4cim4b8ji" path="res://escena/pared_vertical.tscn" id="4_ma4tf"]
+[ext_resource type="PackedScene" uid="uid://cgri5wa162pf2" path="res://escena/moneda.tscn" id="5_mg73o"]
+[ext_resource type="AudioStream" uid="uid://cnufv7xwfksxj" path="res://Assets/bosque background.wav" id="6_gwbxo"]
+[ext_resource type="AudioStream" uid="uid://ctopse3ayceiv" path="res://Assets/voces/una moneda_.mp3" id="7_0w2kp"]
+[ext_resource type="AudioStream" uid="uid://cnqfqhj3y22ya" path="res://Assets/voces/que extraña moneda.mp3" id="8_kyb8m"]
+[ext_resource type="AudioStream" uid="uid://5ldlajp6xfqd" path="res://Assets/voces/sonido de mi barca caronte.mp3" id="9_rmp1g"]
+[ext_resource type="PackedScene" uid="uid://dlx31kgqou2hn" path="res://escena/background.tscn" id="10_bkq2v"]
+
+[node name="segundaparte" type="Node2D"]
+script = ExtResource("1_ovbi8")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_xuc5o")]
+position = Vector2(-2669, 754)
+
+[node name="pared horizontal" parent="." instance=ExtResource("3_81ohd")]
+position = Vector2(-363, 1184)
+
+[node name="pared horizontal2" parent="." instance=ExtResource("3_81ohd")]
+position = Vector2(-378, -404)
+
+[node name="Pared_Vertical" parent="." instance=ExtResource("4_ma4tf")]
+position = Vector2(-2318, 187)
+
+[node name="Pared_Vertical2" parent="." instance=ExtResource("4_ma4tf")]
+position = Vector2(3886, 222)
+
+[node name="Moneda" parent="." instance=ExtResource("5_mg73o")]
+position = Vector2(3093, 499)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_gwbxo")
+
+[node name="prota una moneda" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0w2kp")
+
+[node name="prota que extraña moneda" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_kyb8m")
+
+[node name="Caronte hey por aqui" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_rmp1g")
+
+[node name="inicio" type="Timer" parent="."]
+
+[node name="background" parent="." instance=ExtResource("10_bkq2v")]
+position = Vector2(1407, -383)
+
+[connection signal="timeout" from="inicio" to="." method="_on_inicio_timeout"]

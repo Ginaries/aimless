@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://lo7byl1s01wn"]
+
+[ext_resource type="PackedScene" uid="uid://dssd3fxojcs2i" path="res://escena/personaje.tscn" id="1_tldng"]
+[ext_resource type="Script" path="res://script/septima.gd" id="1_wd8iv"]
+[ext_resource type="PackedScene" uid="uid://cbs2pasmtlsf3" path="res://escena/pared_horizontal.tscn" id="2_w6a5e"]
+[ext_resource type="PackedScene" uid="uid://dwrc4cim4b8ji" path="res://escena/pared_vertical.tscn" id="3_k3j2s"]
+[ext_resource type="AudioStream" uid="uid://cc3ngp705ns2s" path="res://Assets/voces/vuelve rata.mp3" id="5_jcxwi"]
+[ext_resource type="PackedScene" uid="uid://dxtaxjsoukypp" path="res://escena/moneda_3.tscn" id="5_plk7y"]
+[ext_resource type="AudioStream" uid="uid://b72tgvrkuej23" path="res://Assets/voces/eso es otra moneda_.mp3" id="6_iia8y"]
+[ext_resource type="AudioStream" uid="uid://cjjogr0mtk2p2" path="res://Assets/voces/te encontre___.mp3" id="8_x0rem"]
+[ext_resource type="Texture2D" uid="uid://dimkyt7oyds2y" path="res://sprites/Black.png" id="9_3x5lq"]
+
+[node name="septima" type="Node2D"]
+script = ExtResource("1_wd8iv")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_tldng")]
+position = Vector2(-242, 374)
+
+[node name="pared horizontal" parent="." instance=ExtResource("2_w6a5e")]
+position = Vector2(1969, -793)
+
+[node name="pared horizontal2" parent="." instance=ExtResource("2_w6a5e")]
+position = Vector2(1978, 1560)
+
+[node name="Pared_Vertical" parent="." instance=ExtResource("3_k3j2s")]
+position = Vector2(6337, 444)
+
+[node name="Pared_Vertical2" parent="." instance=ExtResource("3_k3j2s")]
+position = Vector2(-54, 330)
+
+[node name="vuelve rata" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jcxwi")
+
+[node name="moneda 3" parent="." instance=ExtResource("5_plk7y")]
+position = Vector2(5651, 390)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="otra moneda" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_iia8y")
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="te encontre" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_x0rem")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3132, 686.5)
+scale = Vector2(15.6504, 8.2168)
+texture = ExtResource("9_3x5lq")
+
+[connection signal="body_entered" from="moneda 3" to="moneda 3" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

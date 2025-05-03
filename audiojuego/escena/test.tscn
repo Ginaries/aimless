@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://13xqym47fwyu"]
+
+[ext_resource type="Script" path="res://script/level.gd" id="1_ky2ww"]
+[ext_resource type="PackedScene" uid="uid://jragxuiy3dvg" path="res://escena/campana.tscn" id="2_s6ree"]
+[ext_resource type="PackedScene" uid="uid://dssd3fxojcs2i" path="res://escena/personaje.tscn" id="3_sh27f"]
+[ext_resource type="PackedScene" uid="uid://cbs2pasmtlsf3" path="res://escena/pared_horizontal.tscn" id="5_3yjgg"]
+[ext_resource type="AudioStream" uid="uid://ciiv1gaxavgw6" path="res://Assets/voces/ayuda y la campana_.mp3" id="5_46yyd"]
+[ext_resource type="PackedScene" uid="uid://dwrc4cim4b8ji" path="res://escena/pared_vertical.tscn" id="6_dn5el"]
+[ext_resource type="AudioStream" uid="uid://clxj2hc7joqxd" path="res://Assets/voces/Prota 1 despertar (1).mp3" id="7_j1ew0"]
+[ext_resource type="AudioStream" uid="uid://cwxm3q4nc5d5f" path="res://Assets/voces/Narrador mecanico.mp3" id="8_uf4it"]
+[ext_resource type="PackedScene" uid="uid://dlx31kgqou2hn" path="res://escena/background.tscn" id="9_j7y6q"]
+
+[node name="test" type="Node2D"]
+script = ExtResource("1_ky2ww")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_sh27f")]
+position = Vector2(4037, -1783)
+
+[node name="pared horizontal" parent="." instance=ExtResource("5_3yjgg")]
+position = Vector2(1630, -210)
+
+[node name="CollisionShape2D" parent="pared horizontal" index="0"]
+position = Vector2(2987.75, 0)
+
+[node name="pared horizontal2" parent="." instance=ExtResource("5_3yjgg")]
+position = Vector2(1659, -2601)
+
+[node name="CollisionShape2D" parent="pared horizontal2" index="0"]
+position = Vector2(2987.75, 0)
+
+[node name="Pared_Vertical" parent="." instance=ExtResource("6_dn5el")]
+
+[node name="CollisionShape2D" parent="Pared_Vertical" index="0"]
+position = Vector2(1425, -1397)
+
+[node name="Pared_Vertical2" parent="." instance=ExtResource("6_dn5el")]
+position = Vector2(6312, -48)
+
+[node name="CollisionShape2D" parent="Pared_Vertical2" index="0"]
+position = Vector2(1425, -1397)
+
+[node name="Narrador" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_46yyd")
+
+[node name="Campana" parent="." instance=ExtResource("2_s6ree")]
+position = Vector2(1654, -460)
+
+[node name="prota depierta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_j1ew0")
+
+[node name="Mecanica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_uf4it")
+
+[node name="background" parent="." instance=ExtResource("9_j7y6q")]
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="pared horizontal"]
+[editable path="pared horizontal2"]
+[editable path="Pared_Vertical"]
+[editable path="Pared_Vertical2"]

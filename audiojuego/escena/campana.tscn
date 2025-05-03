@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://jragxuiy3dvg"]
+
+[ext_resource type="Script" path="res://script/campana.gd" id="1_x1pv5"]
+[ext_resource type="AudioStream" uid="uid://ryhpcp3ud74t" path="res://Assets/campana1.wav" id="2_7q5gu"]
+[ext_resource type="Texture2D" uid="uid://caff63cddpf0v" path="res://icon.svg" id="3_hodjt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vruic"]
+radius = 300.807
+
+[node name="Campana" type="Area2D" groups=["Campana1"]]
+position = Vector2(1241, 181)
+script = ExtResource("1_x1pv5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 11)
+stream = ExtResource("2_7q5gu")
+volume_db = 10.0
+autoplay = true
+max_distance = 10000.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_hodjt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vruic")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="narrador" type="AudioStreamPlayer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

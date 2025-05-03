@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://tf3pk46rgda"]
+
+[ext_resource type="Script" path="res://script/octava final.gd" id="1_6pdf1"]
+[ext_resource type="PackedScene" uid="uid://dssd3fxojcs2i" path="res://escena/personaje.tscn" id="2_p3dqt"]
+[ext_resource type="PackedScene" uid="uid://cbs2pasmtlsf3" path="res://escena/pared_horizontal.tscn" id="3_7fvav"]
+[ext_resource type="PackedScene" uid="uid://dwrc4cim4b8ji" path="res://escena/pared_vertical.tscn" id="4_q4b5o"]
+[ext_resource type="PackedScene" uid="uid://dsdwllpm6agcl" path="res://escena/salida.tscn" id="5_j1rvp"]
+[ext_resource type="AudioStream" uid="uid://bo1ovefk3plq0" path="res://Assets/crussing water.mp3" id="6_b5kvo"]
+
+[node name="octava final" type="Node2D"]
+script = ExtResource("1_6pdf1")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_p3dqt")]
+position = Vector2(5157, -303)
+
+[node name="pared horizontal" parent="." instance=ExtResource("3_7fvav")]
+position = Vector2(1960, -1168)
+
+[node name="pared horizontal2" parent="." instance=ExtResource("3_7fvav")]
+position = Vector2(1976, 1104)
+
+[node name="Pared_Vertical" parent="." instance=ExtResource("4_q4b5o")]
+
+[node name="Pared_Vertical2" parent="." instance=ExtResource("4_q4b5o")]
+position = Vector2(6280, -24)
+
+[node name="salida" parent="." instance=ExtResource("5_j1rvp")]
+position = Vector2(904, -64)
+
+[node name="ducha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_b5kvo")
+
+[connection signal="body_entered" from="salida" to="." method="_on_salida_body_entered"]

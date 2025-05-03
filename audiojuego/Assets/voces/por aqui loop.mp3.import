@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bafrpinowb128"
+path="res://.godot/imported/por aqui loop.mp3-5fee056f015b8cf824ea5e79f964bcae.mp3str"
+
+[deps]
+
+source_file="res://Assets/voces/por aqui loop.mp3"
+dest_files=["res://.godot/imported/por aqui loop.mp3-5fee056f015b8cf824ea5e79f964bcae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

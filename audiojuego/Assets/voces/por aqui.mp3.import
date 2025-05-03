@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d22elfyk4vb8"
+path="res://.godot/imported/por aqui.mp3-92582e0042e240a2e774ccf58aac0856.mp3str"
+
+[deps]
+
+source_file="res://Assets/voces/por aqui.mp3"
+dest_files=["res://.godot/imported/por aqui.mp3-92582e0042e240a2e774ccf58aac0856.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

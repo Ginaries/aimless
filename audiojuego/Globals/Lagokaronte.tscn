@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqm163qtpsi8n"]
+
+[ext_resource type="AudioStream" uid="uid://bw83enr32l3qy" path="res://Assets/sandy-beach-calm-waves-water-nature-sounds-8052.mp3" id="1_ko1c0"]
+
+[node name="Lagokaronte" type="AudioStreamPlayer"]
+stream = ExtResource("1_ko1c0")
+volume_db = -13.116
+autoplay = true

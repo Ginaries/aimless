@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnv0mn5e32f4a"]
+
+[ext_resource type="Script" path="res://script/rata.gd" id="1_1nw82"]
+[ext_resource type="AudioStream" uid="uid://b7sy41h11t1do" path="res://Assets/rata.mp3" id="1_45ffy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u72xc"]
+radius = 193.023
+
+[node name="rata" type="Area2D"]
+script = ExtResource("1_1nw82")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u72xc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_45ffy")
+volume_db = -5.0
+autoplay = true
+max_distance = 10000.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

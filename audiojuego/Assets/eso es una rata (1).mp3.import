@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3efhfalfbic5"
+path="res://.godot/imported/eso es una rata (1).mp3-d7ef748235ed1cb7e19c2d58f3098db5.mp3str"
+
+[deps]
+
+source_file="res://Assets/eso es una rata (1).mp3"
+dest_files=["res://.godot/imported/eso es una rata (1).mp3-d7ef748235ed1cb7e19c2d58f3098db5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

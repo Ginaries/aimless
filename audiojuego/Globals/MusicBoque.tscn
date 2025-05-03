@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b38p2o6qo88de"]
+
+[ext_resource type="AudioStream" uid="uid://cnufv7xwfksxj" path="res://Assets/bosque background.wav" id="1_tn1l6"]
+
+[node name="MusicBosque" type="AudioStreamPlayer"]
+stream = ExtResource("1_tn1l6")
+volume_db = -22.486
+autoplay = true

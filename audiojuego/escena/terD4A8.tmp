@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnoxxjus0kci0"]
+
+[ext_resource type="PackedScene" uid="uid://dssd3fxojcs2i" path="res://escena/personaje.tscn" id="2_38cy5"]
+[ext_resource type="PackedScene" uid="uid://by5ewuedf1bs4" path="res://escena/barco.tscn" id="3_q4bsn"]
+[ext_resource type="PackedScene" uid="uid://dwrc4cim4b8ji" path="res://escena/pared_vertical.tscn" id="4_nmlee"]
+[ext_resource type="PackedScene" uid="uid://cbs2pasmtlsf3" path="res://escena/pared_horizontal.tscn" id="5_4rapc"]
+[ext_resource type="AudioStream" uid="uid://bwf0kr3bkaiwy" path="res://Assets/voces/karonte_final tercera escena.mp3" id="6_5exvi"]
+
+[node name="Tercera parte" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_38cy5")]
+position = Vector2(3713, -201)
+
+[node name="barco" parent="." instance=ExtResource("3_q4bsn")]
+position = Vector2(553, -916)
+
+[node name="Pared_Vertical" parent="." instance=ExtResource("4_nmlee")]
+position = Vector2(5000, -456)
+
+[node name="Pared_Vertical2" parent="." instance=ExtResource("4_nmlee")]
+position = Vector2(-120, -488)
+
+[node name="pared horizontal" parent="." instance=ExtResource("5_4rapc")]
+position = Vector2(1200, 576)
+
+[node name="pared horizontal2" parent="." instance=ExtResource("5_4rapc")]
+position = Vector2(1192, -1656)
+
+[node name="Narrador" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5exvi")

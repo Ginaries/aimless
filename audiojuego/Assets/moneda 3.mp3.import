@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dw5eek3g41yv3"
+path="res://.godot/imported/moneda 3.mp3-020407ecf0eff47c002351b708a97469.mp3str"
+
+[deps]
+
+source_file="res://Assets/moneda 3.mp3"
+dest_files=["res://.godot/imported/moneda 3.mp3-020407ecf0eff47c002351b708a97469.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

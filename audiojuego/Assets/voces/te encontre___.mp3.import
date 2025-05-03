@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjjogr0mtk2p2"
+path="res://.godot/imported/te encontre___.mp3-b58df8e4f42a6c827967a031d40ff1f9.mp3str"
+
+[deps]
+
+source_file="res://Assets/voces/te encontre___.mp3"
+dest_files=["res://.godot/imported/te encontre___.mp3-b58df8e4f42a6c827967a031d40ff1f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

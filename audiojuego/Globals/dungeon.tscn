@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://df5xkag2m6y8m"]
+
+[ext_resource type="AudioStream" uid="uid://c5d3pmktyjxoy" path="res://Assets/dungeon.mp3" id="1_n8ogr"]
+
+[node name="dungeon" type="AudioStreamPlayer"]
+stream = ExtResource("1_n8ogr")
+volume_db = -5.0
+autoplay = true

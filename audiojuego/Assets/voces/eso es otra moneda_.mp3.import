@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b72tgvrkuej23"
+path="res://.godot/imported/eso es otra moneda_.mp3-70aaff61cedbc73e40d8e1e600317d2d.mp3str"
+
+[deps]
+
+source_file="res://Assets/voces/eso es otra moneda_.mp3"
+dest_files=["res://.godot/imported/eso es otra moneda_.mp3-70aaff61cedbc73e40d8e1e600317d2d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

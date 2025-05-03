@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc1ppexbefkr0"]
+
+[ext_resource type="Script" path="res://script/distraccion.gd" id="1_serih"]
+[ext_resource type="AudioStream" uid="uid://cku8jbs567asg" path="res://Assets/cadena.mp3" id="1_wk521"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uwbys"]
+
+[node name="distraccion" type="Area2D"]
+position = Vector2(-234, 1223)
+script = ExtResource("1_serih")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_wk521")
+volume_db = -10.0
+autoplay = true
+max_distance = 10000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uwbys")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

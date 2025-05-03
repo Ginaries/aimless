@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj2jtln0jvlrc"
+path="res://.godot/imported/debo confiar.mp3-af8ce2068a31f3207d9e698dd95c32b8.mp3str"
+
+[deps]
+
+source_file="res://Assets/voces/debo confiar.mp3"
+dest_files=["res://.godot/imported/debo confiar.mp3-af8ce2068a31f3207d9e698dd95c32b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

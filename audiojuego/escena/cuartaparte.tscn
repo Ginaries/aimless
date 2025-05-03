@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://yxk1vaxsa1at"]
+
+[ext_resource type="Script" path="res://script/cuartaparte.gd" id="1_lvh6i"]
+[ext_resource type="PackedScene" uid="uid://dssd3fxojcs2i" path="res://escena/personaje.tscn" id="1_v2in8"]
+[ext_resource type="PackedScene" uid="uid://cbs2pasmtlsf3" path="res://escena/pared_horizontal.tscn" id="2_ys3v8"]
+[ext_resource type="PackedScene" uid="uid://dwrc4cim4b8ji" path="res://escena/pared_vertical.tscn" id="3_f3ul1"]
+[ext_resource type="PackedScene" uid="uid://c6s0v2ttyyvvs" path="res://escena/puerta.tscn" id="4_84l6n"]
+[ext_resource type="AudioStream" uid="uid://dj2jtln0jvlrc" path="res://Assets/voces/debo confiar.mp3" id="6_dd3gw"]
+[ext_resource type="PackedScene" uid="uid://dlx31kgqou2hn" path="res://escena/background.tscn" id="7_dtcpg"]
+
+[node name="cuartaparte" type="Node2D"]
+script = ExtResource("1_lvh6i")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_v2in8")]
+
+[node name="pared horizontal" parent="." instance=ExtResource("2_ys3v8")]
+position = Vector2(2100, -165)
+
+[node name="pared horizontal2" parent="." instance=ExtResource("2_ys3v8")]
+position = Vector2(2033, 1267)
+
+[node name="Pared_Vertical" parent="." instance=ExtResource("3_f3ul1")]
+position = Vector2(189, 57)
+
+[node name="Pared_Vertical2" parent="." instance=ExtResource("3_f3ul1")]
+position = Vector2(6374, 412)
+
+[node name="Puerta" parent="." instance=ExtResource("4_84l6n")]
+position = Vector2(2016, 959)
+
+[node name="porq debo confiar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_dd3gw")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="background" parent="." instance=ExtResource("7_dtcpg")]
+position = Vector2(3769, 567)
+
+[connection signal="body_entered" from="Puerta" to="Puerta" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
